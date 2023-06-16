@@ -1,2 +1,2 @@
-# Anaconda.Python-
+# Anaconda.Python
 Anaconda Python 

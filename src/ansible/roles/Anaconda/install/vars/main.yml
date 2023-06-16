@@ -1,0 +1,6 @@
+arch: "{{'amd64' if ansible_architecture == 'x86_64' else 'arm64' if ansible_architecture == 'arm64'}}"
+file_name: Anaconda3-{{anaconda_version}}-1-Linux-{{arch}}.sh
+server: https://repo.anaconda.com/archive/
+linux_download: "{{server}}{{file_name}}"
+
+common: ["official download", "repository"]
