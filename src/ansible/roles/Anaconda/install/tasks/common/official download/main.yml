@@ -1,9 +1,10 @@
-# https://go.dev/doc/install
+# https://www.anaconda.com/download
 
 - name: Download Anaconda Python
   ansible.builtin.get_url:
     url: "{{linux_download}}"
     dest: "{{local_mirror}}/{{file_name}}"
+    mode: 0755
 
 # - name: Remove old install
 #   ansible.builtin.file:
@@ -11,7 +12,9 @@
 #     state: absent
 #   become: true
 
-# - name: Install Anaconda Python
+# https://stackoverflow.com/questions/49338902/how-to-install-anaconda-miniconda-on-linux-silently
+
+# - name: Silent Install Anaconda
 #   ansible.builtin.unarchive:
 #     src: "{{local_mirror}}/{{file_name}}"
 #     dest: /usr/local/
