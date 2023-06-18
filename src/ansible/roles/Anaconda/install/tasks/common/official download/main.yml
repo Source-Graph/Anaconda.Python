@@ -1,16 +1,15 @@
 # https://www.anaconda.com/download
 
+- name: Create directory
+  ansible.builtin.file:
+    path: "{{local_mirror}}"
+    state: directory
+
 - name: Download Anaconda Python
   ansible.builtin.get_url:
     url: "{{linux_download}}"
     dest: "{{local_mirror}}/{{file_name}}"
     mode: 0755
-
-# - name: Remove old install
-#   ansible.builtin.file:
-#     path: /usr/local/go
-#     state: absent
-#   become: true
 
 # https://stackoverflow.com/questions/49338902/how-to-install-anaconda-miniconda-on-linux-silently
 
