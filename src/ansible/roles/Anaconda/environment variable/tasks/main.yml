@@ -1,4 +1,4 @@
-# https://developer.android.com/tools/variables#set
+# https://docs.anaconda.com/free/anaconda/install/linux/
 
 - name: stat .profile
   ansible.builtin.stat:

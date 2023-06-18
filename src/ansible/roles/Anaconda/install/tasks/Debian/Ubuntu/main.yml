@@ -1,10 +1,4 @@
----
-- name: Install 
-  ansible.builtin.apt:
-    pkg:
-    - htop
-  become: true
-  when: ubuntu_default not in common
+# https://docs.anaconda.com/free/anaconda/install/linux/
 
 - include_tasks: "common/{{ubuntu_default}}/main.yml"
   when: ubuntu_default in common

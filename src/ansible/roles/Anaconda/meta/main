@@ -2,4 +2,4 @@
 dependencies:
 - uni/get
 - Anaconda/install
-# - Anaconda/environment variable
+- Anaconda/environment variable
